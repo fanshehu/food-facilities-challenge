@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF Food Facilities Finder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <header class="mb-4">
+            <h1>San Francisco Food Facilities Finder</h1>
+            <p class="lead">Search for food trucks and carts in San Francisco</p>
+        </header>
+
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Search by Applicant Name
+                    </div>
+                    <div class="card-body">
+                        <form id="applicantSearchForm">
+                            <div class="mb-3">
+                                <label for="applicantName" class="form-label">Applicant Name</label>
+                                <input type="text" class="form-control" id="applicantName" placeholder="Enter name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="applicantStatus" class="form-label">Status (Optional)</label>
+                                <select class="form-select" id="applicantStatus">
+                                    <option value="">All Statuses</option>
+                                    <option value="APPROVED">APPROVED</option>
+                                    <option value="EXPIRED">EXPIRED</option>
+                                    <option value="REQUESTED">REQUESTED</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Search by Street Name
+                    </div>
+                    <div class="card-body">
+                        <form id="streetSearchForm">
+                            <div class="mb-3">
+                                <label for="streetName" class="form-label">Street Name</label>
+                                <input type="text" class="form-control" id="streetName" placeholder="Enter street name">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Find Nearest Food Trucks
+                    </div>
+                    <div class="card-body">
+                        <form id="nearestSearchForm">
+                            <div class="mb-3">
+                                <label for="latitude" class="form-label">Latitude</label>
+                                <input type="number" step="0.000001" class="form-control" id="latitude" placeholder="37.7749">
+                            </div>
+                            <div class="mb-3">
+                                <label for="longitude" class="form-label">Longitude</label>
+                                <input type="number" step="0.000001" class="form-control" id="longitude" placeholder="-122.4194">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nearestStatus" class="form-label">Status</label>
+                                <select class="form-select" id="nearestStatus">
+                                    <option value="APPROVED">APPROVED</option>
+                                    <option value="ALL">ALL</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Find Nearest</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        Results
+                    </div>
+                    <div class="card-body">
+                        <div id="resultsContainer">
+                            <p class="text-center">Search for food facilities to see results</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

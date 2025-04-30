@@ -1,0 +1,58 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #0d6efd;
+    color: white;
+    font-weight: bold;
+}
+
+.facility-card {
+    border-left: 4px solid #0d6efd;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.facility-card h5 {
+    margin-top: 0;
+    color: #0d6efd;
+}
+
+.facility-card .badge {
+    margin-left: 10px;
+}
+
+.facility-card .distance {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.approved {
+    background-color: #198754;
+}
+
+.expired {
+    background-color: #dc3545;
+}
+
+.suspended {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.requested {
+    background-color: #6c757d;
+}
+
+#useCurrentLocation {
+    margin-left: 10px;
+}
